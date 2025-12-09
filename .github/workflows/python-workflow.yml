@@ -1,7 +1,9 @@
 name: CI
 
 on:
-  push:  
+  schedule:
+    - cron: "* * * * *"
+    
 
 jobs:
   build:
@@ -20,6 +22,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
+
 
 
 
